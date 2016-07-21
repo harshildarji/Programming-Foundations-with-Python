@@ -1,9 +1,9 @@
 import os, string
 
 def rename():
-    path = r'C:\Users\Jarvis\OneDrive\Documents\Python\Programming Foundations with Python\images'
-    fList = os.listdir(path)
     cwd = os.getcwd()
+    path = cwd + '\images'
+    fList = os.listdir(path)
     
     os.chdir(path)
     for file in fList:
@@ -12,5 +12,4 @@ def rename():
         os.rename(file, file.translate(trans))
 
     os.chdir(cwd)
-
 rename()

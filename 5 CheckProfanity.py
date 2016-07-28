@@ -27,5 +27,9 @@ readText(path)
 if not profanityResult:
     print('No profanity found!')
 else:
+    output = open('Profanity Result.txt', 'w')
     for item in profanityResult:
         print(item)
+        output.write(item + '\n')
+    output.close()
+        
